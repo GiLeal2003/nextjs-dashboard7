@@ -60,8 +60,8 @@ interface TokenData {
         <h2 className={styles.h2}>Clique para acessar QR Code e apresente no CAIXA do estabelecimento</h2>
           
           <section className={styles.token_list}>
-            {tokenData.map((token) => (
-              <Link href="http://localhost:3000/pedido/91tokenAntigo">
+            {tokenData.map((token,index) => ( 
+              <Link key = {index} href="http://localhost:3000/pedido/91tokenAntigo">
               <div
                 key={token.pedido}
                 className={styles.token_item}
